@@ -1,0 +1,56 @@
+[{
+  "_id": {
+    "$oid": "652b19f01fd077aa26e3d7df"
+  },
+  "nome": "Need for Speed",
+  "categoria": "Corrida",
+  "console": "Playstation"
+},
+{
+  "_id": {
+    "$oid": "652b1e177c0d8b7c537356a2"
+  },
+  "nome": "Mortal Kombat",
+  "categoria": "Luta",
+  "console": "Xbox"
+},
+{
+  "_id": {
+    "$oid": "652b26697f9d82a19ef5be1f"
+  },
+  "nome": "Street Fighter",
+  "categoria": "Luta",
+  "console": "Playstation"
+},
+{
+  "_id": {
+    "$oid": "652b48a5d2225961d5f7a540"
+  },
+  "nome": "Asphalt 9",
+  "categoria": "Corrida",
+  "console": "Mobile"
+},
+{
+  "_id": {
+    "$oid": "652b49e7f1f6e15686feca8e"
+  },
+  "nome": "The Sims 3",
+  "categoria": "Simulação",
+  "console": "PC"
+},
+{
+  "_id": {
+    "$oid": "652b65e1a79d56269391952c"
+  },
+  "nome": "War Thunder",
+  "categoria": "Simulação",
+  "console": "PC"
+},
+{
+  "_id": {
+    "$oid": "652d9ca11aa3159de53c5b45"
+  },
+  "nome": "Dota 2",
+  "categoria": "Moba",
+  "console": "PC"
+}]
