@@ -1,30 +1,6 @@
 [{
   "_id": {
-    "$oid": "652b19f01fd077aa26e3d7df"
-  },
-  "nome": "Need for Speed",
-  "categoria": "Corrida",
-  "console": "Playstation"
-},
-{
-  "_id": {
-    "$oid": "652b1e177c0d8b7c537356a2"
-  },
-  "nome": "Mortal Kombat",
-  "categoria": "Luta",
-  "console": "Xbox"
-},
-{
-  "_id": {
-    "$oid": "652b26697f9d82a19ef5be1f"
-  },
-  "nome": "Street Fighter",
-  "categoria": "Luta",
-  "console": "Playstation"
-},
-{
-  "_id": {
-    "$oid": "652b48a5d2225961d5f7a540"
+    "$oid": "65451ac207f35313914b37c4"
   },
   "nome": "Asphalt 9",
   "categoria": "Corrida",
@@ -32,25 +8,57 @@
 },
 {
   "_id": {
-    "$oid": "652b49e7f1f6e15686feca8e"
+    "$oid": "65451ad707f35313914b37c6"
   },
-  "nome": "The Sims 3",
-  "categoria": "Simulação",
-  "console": "PC"
+  "nome": "Need for Speed",
+  "categoria": "Corrida",
+  "console": "Playstation"
 },
 {
   "_id": {
-    "$oid": "652b65e1a79d56269391952c"
+    "$oid": "65451ae007f35313914b37c7"
   },
-  "nome": "War Thunder",
-  "categoria": "Simulação",
-  "console": "PC"
+  "nome": "Mortal Kombat",
+  "categoria": "Luta",
+  "console": "Xbox"
 },
 {
   "_id": {
-    "$oid": "652d9ca11aa3159de53c5b45"
+    "$oid": "65451e848a410ecb836024c9"
   },
   "nome": "Dota 2",
   "categoria": "Moba",
+  "console": "PC"
+},
+{
+  "_id": {
+    "$oid": "65451e8d8a410ecb836024ca"
+  },
+  "nome": "Eternal Return",
+  "categoria": "Battle Royale",
+  "console": "PC"
+},
+{
+  "_id": {
+    "$oid": "65466213c634582b39b79b96"
+  },
+  "nome": "Street Fighter",
+  "categoria": "Luta",
+  "console": "Playstation"
+},
+{
+  "_id": {
+    "$oid": "654662943a34634f4b960096"
+  },
+  "nome": "Hollow Knight",
+  "categoria": "Plataforma",
+  "console": "PC"
+},
+{
+  "_id": {
+    "$oid": "654662a43a34634f4b960097"
+  },
+  "nome": "City Skylines",
+  "categoria": "Simulação",
   "console": "PC"
 }]
