@@ -2,6 +2,7 @@ from flask import Flask, render_template, request, redirect, session
 from flask_session import Session
 from pymongo import MongoClient
 from bson.objectid import ObjectId
+from googlesearch import search
 
 client = MongoClient("mongodb://localhost:27017")
 db = client["jogos"]
@@ -20,7 +21,7 @@ jogos=[jogo for jogo in collec.find({}, {"_id": 1,  "nome": 1, "categoria": 1, "
 def index():
     lista=[jogo for jogo in collec.find({}, {"_id": 1,  "nome": 1, "categoria": 1, "console":1})]
         
-    return render_template('index.html', titulo='Jogos', jogos=lista)
+    return render_template('index.html', titulo='Jogos', jogos=lista, displayLinks=False)
 
 @app.route('/novo')
 def novo():
@@ -38,19 +39,19 @@ def criar():
 def separarCategoria():
     jogos=[jogo for jogo in collec.find({}, {"_id": 1,  "nome": 1, "categoria": 1, "console":1}).sort("categoria",1)]
 
-    return render_template('index.html', titulo='Jogos', jogos=jogos)
+    return render_template('index.html', titulo='Jogos', jogos=jogos, displayLinks=False)
 
 @app.route('/separarConsole')
 def separarConsole():
     jogos=[jogo for jogo in collec.find({}, {"_id": 1,  "nome": 1, "categoria": 1, "console":1}).sort("console",1)]
    
-    return render_template('index.html', titulo='Jogos', jogos=jogos)
+    return render_template('index.html', titulo='Jogos', jogos=jogos, displayLinks=False)
 
 @app.route('/separarNome')
 def separarNome():
     jogos=[jogo for jogo in collec.find({}, {"_id": 1,  "nome": 1, "categoria": 1, "console":1}).sort("nome",1)]
 
-    return render_template('index.html', titulo='Jogos', jogos=jogos)
+    return render_template('index.html', titulo='Jogos', jogos=jogos, displayLinks=False)
 
 @app.route('/deletar/<id>')
 def deletar(id):
@@ -75,5 +76,15 @@ def editarB():
     console = request.form['console']
     collec.update_one({"_id" :ObjectId(id)},{'$set':{"nome":nome,"categoria":categoria,"console":console}})
     return redirect('/')
+
+@app.route('/gerarLink/<id>')
+def gerarLink(id):
+    idLink = request.view_args['id']
+    jogo=collec.find_one({"_id": ObjectId(idLink)})
+    print(jogo)
+    links = [x for x in search(jogo['nome'], safe="on", num=3, stop=3)]
+    jogos=[jogo for jogo in collec.find({}, {"_id": 1,  "nome": 1, "categoria": 1, "console":1}).sort("nome",1)]
+    return render_template('index.html', titulo='Jogos', jogos=jogos, displayLinks=True, links=links)
+
 
 app.run(debug=True)
